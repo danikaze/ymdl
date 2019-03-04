@@ -33,7 +33,7 @@ class RawAppTitleBar extends React.PureComponent<StackProps> {
           </Typography>
 
           <Button color='inherit' onClick={onToggleOptions}>
-            Toggle options
+            Options
           </Button>
         </Toolbar>
       </AppBar>

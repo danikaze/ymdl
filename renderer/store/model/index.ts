@@ -1,3 +1,6 @@
+import { ThunkDispatch } from 'redux-thunk';
+import { Action } from '../actions';
+
 export interface AppProps {
   title: string;
   version: string;
@@ -11,7 +14,7 @@ export interface ProfileOptions {
 export interface Profile {
   name: string;
   url: string;
-  optinos: ProfileOptions;
+  options: ProfileOptions;
 }
 
 export interface Item {
@@ -28,7 +31,10 @@ export interface State {
   app: AppProps;
   profiles: Profile[];
   items: Item[];
-  selectedItem: Item;
+  selectedItem?: Item;
+  url: string;
   options: ProfileOptions;
   ui: Ui;
 }
+
+export type TypeDispatch = ThunkDispatch<State, null, Action>;

@@ -11,8 +11,15 @@ export function reducer(state: State, action: Action): State {
         },
       });
 
+    case 'updateOptions':
+      return updateState(state, {
+        options: action.data,
+      });
+
     case 'updateUrl':
-      return state;
+      return updateState(state, {
+        url: action.url,
+      });
 
     default:
       return state;

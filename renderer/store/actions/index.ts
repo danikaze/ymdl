@@ -1,4 +1,6 @@
-import { ToggleOptionsAction } from './options';
+import { ToggleOptionsAction, UpdateOptionsAction } from './options';
 import { UpdateUrlAction } from './main';
 
-export type Action = ToggleOptionsAction | UpdateUrlAction;
+export type Action = ToggleOptionsAction
+                   | UpdateOptionsAction
+                   | UpdateUrlAction;
